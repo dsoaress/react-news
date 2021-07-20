@@ -1,0 +1,24 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# next.js
+.next
+
+# jest
+coverage
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env
+
+# vercel
+.vercel

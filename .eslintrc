@@ -1,0 +1,10 @@
+{
+  "extends": ["next", "next/core-web-vitals", "plugin:prettier/recommended"],
+  "plugins": ["prettier", "simple-import-sort"],
+  "rules": {
+    "prettier/prettier": "error",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "@next/next/no-page-custom-font": "off"
+  }
+}
