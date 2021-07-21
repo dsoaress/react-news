@@ -1,5 +1,6 @@
 import { GetServerSideProps } from 'next'
 import Head from 'next/head'
+import { getSession } from 'next-auth/client'
 
 import { Layout } from '@/components/Layout'
 import { PostItem } from '@/components/PostItem'
@@ -26,7 +27,18 @@ export default function Post({ post }: PostProps) {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps = async ({ params, req }) => {
+  const session = await getSession({ req })
+
+  if (!session?.activeSubscription) {
+    return {
+      redirect: {
+        destination: `/posts/preview/${params?.slug}`,
+        permanent: false
+      }
+    }
+  }
+
   const post = await getSinglePost(String(params?.slug))
   return {
     props: { post }

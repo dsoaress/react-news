@@ -1,5 +1,8 @@
 import { GetServerSideProps } from 'next'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
+import { useSession } from 'next-auth/client'
+import { useEffect } from 'react'
 
 import { Layout } from '@/components/Layout'
 import { PostItem } from '@/components/PostItem'
@@ -15,6 +18,15 @@ type PostProps = {
 }
 
 export default function Post({ post }: PostProps) {
+  const [session] = useSession()
+  const router = useRouter()
+
+  useEffect(() => {
+    if (session?.activeSubscription) {
+      router.push(`/posts/${post.slug}`)
+    }
+  }, [post.slug, router, session])
+
   return (
     <Layout>
       <Head>

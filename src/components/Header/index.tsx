@@ -1,10 +1,24 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import { SignInButton } from '@/components/SignInButton'
 
 import { Content, Wrapper } from './styles'
 
 export function Header() {
+  const { asPath } = useRouter()
+
+  const links = [
+    {
+      label: 'Home',
+      url: '/'
+    },
+    {
+      label: 'Posts',
+      url: '/posts'
+    }
+  ]
+
   return (
     <Wrapper>
       <Content>
@@ -13,12 +27,11 @@ export function Header() {
         </div>
 
         <nav>
-          <Link href="/">
-            <a className="active">Home</a>
-          </Link>
-          <Link href="/posts">
-            <a>Posts</a>
-          </Link>
+          {links.map(link => (
+            <Link href={link.url} key={link.url}>
+              <a className={asPath === link.url ? 'active' : ''}>{link.label}</a>
+            </Link>
+          ))}
         </nav>
 
         <SignInButton />
