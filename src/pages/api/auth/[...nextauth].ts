@@ -3,11 +3,17 @@ import Providers from 'next-auth/providers'
 
 import { fauna, q } from '@/services/fauna'
 
+const { GITHUB_ID, GITHUB_SECRET } = process.env
+
+if (!GITHUB_ID || !GITHUB_SECRET) {
+  throw new Error('GitHub keys are missing')
+}
+
 export default NextAuth({
   providers: [
     Providers.GitHub({
-      clientId: process.env.GITHUB_ID,
-      clientSecret: process.env.GITHUB_SECRET,
+      clientId: GITHUB_ID,
+      clientSecret: GITHUB_SECRET,
       scope: 'read:user'
     })
   ],

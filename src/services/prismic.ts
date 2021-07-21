@@ -4,25 +4,13 @@ import { IncomingMessage } from 'http'
 export function getPrismicClient(req?: IncomingMessage) {
   const { PRISMIC_ACCESS_TOKEN, PRISMIC_ENDPOINT } = process.env
 
-  function accessToken() {
-    if (!PRISMIC_ACCESS_TOKEN) {
-      throw new Error('PRISMIC_ACCESS_TOKEN is missing')
-    }
-
-    return PRISMIC_ACCESS_TOKEN
+  if (!PRISMIC_ACCESS_TOKEN || !PRISMIC_ENDPOINT) {
+    throw new Error('Prismic keys are missing')
   }
 
-  function endpoint() {
-    if (!PRISMIC_ENDPOINT) {
-      throw new Error('PRISMIC_ENDPOINT is missing')
-    }
-
-    return PRISMIC_ENDPOINT
-  }
-
-  const prismic = Prismic.client(endpoint(), {
+  const prismic = Prismic.client(PRISMIC_ENDPOINT, {
     req,
-    accessToken: accessToken()
+    accessToken: PRISMIC_ACCESS_TOKEN
   })
 
   return prismic

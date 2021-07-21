@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next'
+import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useSession } from 'next-auth/client'
@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 
 import { Layout } from '@/components/Layout'
 import { PostItem } from '@/components/PostItem'
-import { getSinglePost } from '@/lib/getPosts'
+import { getPaths, getSinglePost } from '@/lib/getPosts'
 
 type PostProps = {
   post: {
@@ -38,10 +38,21 @@ export default function Post({ post }: PostProps) {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = await getPaths()
+
+  return {
+    paths,
+    fallback: 'blocking'
+  }
+}
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const isPreview = true
   const post = await getSinglePost(String(params?.slug), isPreview)
+
   return {
-    props: { post }
+    props: { post },
+    revalidate: 60 * 30
   }
 }

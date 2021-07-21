@@ -1,17 +1,13 @@
 import { Client } from 'faunadb'
 
-const apiKey = () => {
-  const { FAUNADB_KEY } = process.env
+const { FAUNADB_KEY } = process.env
 
-  if (!FAUNADB_KEY) {
-    throw new Error('FAUNADB_KEY is missing')
-  }
-
-  return FAUNADB_KEY
+if (!FAUNADB_KEY) {
+  throw new Error('FAUNADB_KEY is missing')
 }
 
 export const fauna = new Client({
-  secret: apiKey()
+  secret: FAUNADB_KEY
 })
 
 export { query as q } from 'faunadb'

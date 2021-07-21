@@ -1,6 +1,7 @@
 import Prismic from '@prismicio/client'
 import { RichText } from 'prismic-dom'
 
+import { formatDate } from '@/lib/formatDate'
 import { getPrismicClient } from '@/services/prismic'
 
 export async function getAllPosts() {
@@ -19,9 +20,7 @@ export async function getAllPosts() {
       excerpt:
         post.data.content.find((content: { type: string }) => content.type === 'paragraph')?.text ??
         '',
-      date: new Date(post.data.date).toLocaleDateString('en', {
-        dateStyle: 'medium'
-      })
+      date: formatDate(post.data.date)
     }
   })
 
@@ -41,10 +40,18 @@ export async function getSinglePost(slug: string, preview: boolean = false) {
     slug: slug,
     title: RichText.asText(response.data.title),
     content,
-    date: new Date(response.data.date).toLocaleDateString('en', {
-      dateStyle: 'medium'
-    })
+    date: formatDate(response.data.date)
   }
 
   return post
+}
+
+export async function getPaths() {
+  const posts = await getAllPosts()
+
+  const paths = posts.map(post => ({
+    params: { slug: post.slug }
+  }))
+
+  return paths
 }
