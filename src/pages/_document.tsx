@@ -35,6 +35,14 @@ export default class Document extends NextDocument {
             rel="stylesheet"
           />
 
+          <script
+            async
+            defer
+            src="https://stats.marscollective.co/umami.js"
+            data-website-id="80175260-a0ee-4f92-8f44-abf31370af32"
+            data-domains="react-news.dsoares.me"
+          />
+
           <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         </Head>
         <body>
