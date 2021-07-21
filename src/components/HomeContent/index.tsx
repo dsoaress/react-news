@@ -1,3 +1,6 @@
+import Image from 'next/image'
+
+import heroImg from '@/assets/hero.svg'
 import { SubscribeButton } from '@/components/SubscribeButton'
 
 import { Content, ImageWrapper, Wrapper } from './styles'
@@ -19,7 +22,9 @@ export function HomeContent() {
 
         <SubscribeButton />
       </Content>
-      <ImageWrapper />
+      <ImageWrapper>
+        <Image src={heroImg} alt="Girl coding" />
+      </ImageWrapper>
     </Wrapper>
   )
 }

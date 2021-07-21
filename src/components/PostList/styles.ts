@@ -1,7 +1,7 @@
 import tw, { styled } from 'twin.macro'
 
 export const Wrapper = styled.main`
-  ${tw`max-w-screen-xl px-8 mx-auto`}
+  ${tw`max-w-screen-xl px-8 mx-auto mb-8`}
 `
 
 export const Content = styled.div`

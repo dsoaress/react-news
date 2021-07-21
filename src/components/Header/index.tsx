@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 
 import { SignInButton } from '@/components/SignInButton'
 
-import { Content, Wrapper } from './styles'
+import { Content, SignInButtonWrapper, Wrapper } from './styles'
 
 export function Header() {
   const { asPath } = useRouter()
@@ -34,7 +34,9 @@ export function Header() {
           ))}
         </nav>
 
-        <SignInButton />
+        <SignInButtonWrapper>
+          <SignInButton />
+        </SignInButtonWrapper>
       </Content>
     </Wrapper>
   )

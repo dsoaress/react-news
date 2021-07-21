@@ -8,7 +8,7 @@ export const Content = styled.div`
   ${tw`flex items-center h-20 max-w-screen-xl px-8 mx-auto`}
 
   .logo {
-    ${tw`text-3xl font-black`}
+    ${tw`text-base font-black md:text-3xl`}
 
     span {
       ${tw`text-primary-600`}
@@ -16,7 +16,7 @@ export const Content = styled.div`
   }
 
   nav {
-    ${tw`h-20 ml-20 space-x-8`}
+    ${tw`h-20 ml-6 space-x-3 text-sm md:text-base md:ml-20 md:space-x-8`}
 
     a {
       ${tw`relative inline-block h-20 px-2 transition-colors duration-200 text-neutral-600 line-height[5rem] hover:text-neutral-900`}
@@ -26,8 +26,8 @@ export const Content = styled.div`
       }
     }
   }
+`
 
-  button {
-    ${tw`ml-auto`}
-  }
+export const SignInButtonWrapper = styled.div`
+  ${tw`hidden ml-auto md:block`}
 `

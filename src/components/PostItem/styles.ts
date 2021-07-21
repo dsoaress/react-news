@@ -5,7 +5,7 @@ type ContentProps = {
 }
 
 export const Wrapper = styled.main`
-  ${tw`max-w-screen-xl px-8 mx-auto`}
+  ${tw`max-w-screen-xl px-8 mx-auto mb-8`}
 `
 
 export const Content = styled.article<ContentProps>`
