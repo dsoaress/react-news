@@ -1,7 +1,7 @@
 import tw, { styled } from 'twin.macro'
 
 export const Wrapper = styled.footer`
-  ${tw`h-20 shadow-md`}
+  ${tw`h-20`}
 `
 
 export const Content = styled.div`

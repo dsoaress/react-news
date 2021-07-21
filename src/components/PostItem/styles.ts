@@ -30,7 +30,7 @@ export const Content = styled.article<ContentProps>`
   }
 
   .continueReading {
-    ${tw`p-8 mt-16 mb-8 text-lg text-center rounded-full text-primary-200 bg-primary-600`}
+    ${tw`p-8 mt-16 text-lg text-center rounded-full mb-28 text-primary-200 bg-primary-600`}
 
     a {
       ${tw`ml-2 font-bold text-white hover:underline`}
