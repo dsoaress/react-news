@@ -519,10 +519,37 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@prismicio/client@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@prismicio/client/-/client-5.1.0.tgz#f236d7fca09535d61e599872e7c38afda62b8b3c"
+  integrity sha512-LCb+arVVxJOoPM+8qfLCC/Dqse7mh+Q1k3oo5W5Uzu7vVO+vtc7CUYHxgCDkvekakYHc9407kwWu65ErZw+CPQ==
+  dependencies:
+    cross-fetch "^3.0.6"
+
+"@prismicio/helpers@^1.0.4":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@prismicio/helpers/-/helpers-1.0.5.tgz#2be60a1b44e6c33d7918fa74fe67648dc8af0c15"
+  integrity sha512-TPpuAFHNxlCTrEihHnRKcq6zc0oZV0sfz5/iHoSpl5vorwPbwZWiF88JGeflNdefW4A69b5A3x3mfptKPdpoxg==
+
+"@prismicio/richtext@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@prismicio/richtext/-/richtext-1.1.0.tgz#c8769c3d953ae42854a2aba951e3b2121682b8c7"
+  integrity sha512-925JuFiZiIkwu9jmlR9O/U8xCSZk/Y6BQDXKpavoVsKo+n90ml1hGdtWkglIupX+ITQO1ZINyDgUgiY1oG9dsA==
+
 "@rushstack/eslint-patch@^1.0.6":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.0.6.tgz#023d72a5c4531b4ce204528971700a78a85a0c50"
   integrity sha512-Myxw//kzromB9yWgS8qYGuGVf91oBUUJpNvy5eM50sqvmKLbKjwLxohJnkWGTeeI9v9IBMtPLxz5Gc60FIfvCA==
+
+"@tailwindcss/typography@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.4.1.tgz#51ddbceea6a0ee9902c649dbe58871c81a831212"
+  integrity sha512-ovPPLUhs7zAIJfr0y1dbGlyCuPhpuv/jpBoFgqAc658DWGGrOBWBMpAWLw2KlzbNeVk4YBJMzue1ekvIbdw6XA==
+  dependencies:
+    lodash.castarray "^4.4.0"
+    lodash.isplainobject "^4.0.6"
+    lodash.merge "^4.6.2"
+    lodash.uniq "^4.5.0"
 
 "@types/eslint-scope@^3.7.0":
   version "3.7.1"
@@ -582,6 +609,11 @@
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
+
+"@types/prismic-dom@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@types/prismic-dom/-/prismic-dom-2.1.1.tgz#964f4699a3068721627674d12a0689e457e9065c"
+  integrity sha512-gZSFBARo4vFnpclOq2DzU9t4wikVsZ0+lL4hXaRoeUJinhGSK+nMERcZJgXglK/+QRcw3HBPbGJzgzTqQGSuNw==
 
 "@types/prop-types@*":
   version "15.7.4"
@@ -1609,6 +1641,13 @@ create-hmac@^1.1.0, create-hmac@^1.1.4, create-hmac@^1.1.7:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
+cross-fetch@^3.0.6:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.1.4.tgz#9723f3a3a247bf8b89039f3a380a9244e8fa2f39"
+  integrity sha512-1eAtFWdIubi6T4XPy6ei9iUFoKpUkIF971QLN8lIvvvwueI65+Nw5haMNKUwfJxabqlIIDODJKGrQ66gxC0PbQ==
+  dependencies:
+    node-fetch "2.6.1"
+
 cross-spawn@^7.0.0, cross-spawn@^7.0.2, cross-spawn@^7.0.3:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
@@ -1957,6 +1996,11 @@ escalade@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/escalade/-/escalade-3.1.1.tgz#d8cfdc7000965c5a0174b4a82eaa5c0552742e40"
   integrity sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==
+
+escape-html@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
+  integrity sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg=
 
 escape-string-regexp@^1.0.5:
   version "1.0.5"
@@ -3137,6 +3181,11 @@ locate-path@^6.0.0:
   dependencies:
     p-locate "^5.0.0"
 
+lodash.castarray@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/lodash.castarray/-/lodash.castarray-4.4.0.tgz#c02513515e309daddd4c24c60cfddcf5976d9115"
+  integrity sha1-wCUTUV4wna3dTCTGDP3c9ZdtkRU=
+
 lodash.clonedeep@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
@@ -3151,6 +3200,11 @@ lodash.get@^4.4.2:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
   integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
+
+lodash.isplainobject@^4.0.6:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz#7c526a52d89b45c45cc690b88163be0497f550cb"
+  integrity sha1-fFJqUtibRcRcxpC4gWO+BJf1UMs=
 
 lodash.merge@^4.6.2:
   version "4.6.2"
@@ -3176,6 +3230,11 @@ lodash.truncate@^4.4.2:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/lodash.truncate/-/lodash.truncate-4.4.2.tgz#5a350da0b1113b837ecfffd5812cbe58d6eae193"
   integrity sha1-WjUNoLERO4N+z//VgSy+WNbq4ZM=
+
+lodash.uniq@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
+  integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
 lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.21:
   version "4.17.21"
@@ -3938,6 +3997,15 @@ pretty-quick@^3.1.1:
     ignore "^5.1.4"
     mri "^1.1.5"
     multimatch "^4.0.0"
+
+prismic-dom@^2.2.5:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/prismic-dom/-/prismic-dom-2.2.5.tgz#0aaa41c436d95c0126af971a053d2ef803b7937b"
+  integrity sha512-GafsY6sGet5EAWNG2w/qXaxgitU74yhEu/0vZEnwOt6PJgCClLmMkDzJHBpdl+wuEWqUhvkFMDUFPHSPwSVmKQ==
+  dependencies:
+    "@prismicio/helpers" "^1.0.4"
+    "@prismicio/richtext" "^1.1.0"
+    escape-html "1.0.3"
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
