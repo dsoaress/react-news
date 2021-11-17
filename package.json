@@ -30,8 +30,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
-    "@commitlint/cli": "^14.0.0",
-    "@commitlint/config-conventional": "^14.0.0",
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
     "@tailwindcss/typography": "^0.4.1",
     "@types/node": "^16.4.0",
     "@types/prismic-dom": "^2.1.1",
